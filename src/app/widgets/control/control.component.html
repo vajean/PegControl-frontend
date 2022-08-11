@@ -1,0 +1,61 @@
+
+<li *ngFor="let f of forecast.data.message">{{f}}</li>
+
+<div class="control-container">
+  <mat-card class="control-card">
+    <mat-card-title>PegControl</mat-card-title>
+    <mat-card-subtitle>{{control.status}}</mat-card-subtitle>
+    <mat-card-content class="control-card-content">
+      <p *ngIf="control.status == 'Waiting'; else start_program">Start a program to see ETA</p>
+
+      <ng-template #start_program>
+        <p *ngIf="control.timeLeft; else calculating_eta"> {{control.timeLeft | date: 'HH:mm'}} left</p>
+        <ng-template #calculating_eta><p>Calculating..</p></ng-template>
+      </ng-template>
+
+      <mat-radio-group *ngIf="control.status == 'Waiting'; else enjoy" aria-label="Select an option">
+        <mat-radio-button (click)="control.fabric = 'cotton'" style="margin-right: 16px" value="1">Cotton</mat-radio-button>
+        <mat-radio-button (click)="control.fabric= 'synthetics'" value="2">Synthetics</mat-radio-button>
+
+      </mat-radio-group>
+      <ng-template #enjoy><p>{{control.controlMessage}}</p></ng-template>
+
+
+    </mat-card-content>
+
+    <mat-card-actions>
+      <button *ngIf="control.status != 'Stopped';else resume" mat-button (click)="control.startProgram()">DRY</button>
+      <ng-template #resume>
+        <button mat-button (click)="control.resumeProgram()">RESUME</button>
+      </ng-template>
+
+      <button *ngIf="control.status == 'Drying';else reset" mat-button (click)="control.stopProgram()">STOP</button>
+      <ng-template #reset>
+        <button *ngIf="control.status == 'Stopped'" mat-button (click)="control.resetProgram()">RESET</button>
+      </ng-template>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="weather-card">
+    <mat-card-title>Forecast</mat-card-title>
+    <mat-card-subtitle>Last updated 22:43</mat-card-subtitle>
+    <mat-card-content class="weather-card-content">
+      <div class="nice-forecast">
+        <mat-icon>wb_cloudy</mat-icon>
+        <p class="par-noM">16/24</p>
+      </div>
+      <div class="nice-forecast">
+        <mat-icon>wb_sunny</mat-icon>
+        <p class="par-noM">16/24</p>
+      </div>
+      <div class="nice-forecast">
+        <mat-icon>grain</mat-icon>
+        <p class="par-noM">16/24</p>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>UPDATE</button>
+      <button mat-button>MORE INFO</button>
+    </mat-card-actions>
+
+  </mat-card>
+</div>

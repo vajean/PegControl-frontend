@@ -1,0 +1,51 @@
+.dht-title {
+  font-size: 0.8rem;
+}
+
+.gauge {
+  margin: 0 8px;
+}
+
+.gauge-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-container {
+  display: flex;
+  justify-content: center;
+  padding:0;
+}
+
+.mat-card-dht {
+  margin-right: 16px;
+  background-color: #d3d6d8;
+  max-height: 160px;
+}
+
+.mat-card-dry {
+  margin-top: 12px;
+  margin-right: 16px;
+  background-color: #d3d6d8;
+}
+
+.floating-measurement {
+  position: relative;
+  top: -65px;
+  left: 29px;
+  font-size: xx-large;
+  font-weight: bold;
+  color: black;
+
+}
+
+.dht-measurement {
+  position: relative;
+  top: -50px;
+  left: 30px;
+  font-size: x-large;
+
+  color: black;
+
+}

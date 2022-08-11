@@ -1,0 +1,21 @@
+.user-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-menu-title {
+  padding-left: 16px;
+  padding-bottom: 16px;
+  font-size: large;
+}
+
+.container {
+  padding-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.device-selection {
+  margin-left: 24px;
+}

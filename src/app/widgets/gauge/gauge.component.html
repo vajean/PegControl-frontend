@@ -1,0 +1,52 @@
+<div class="gauge-container">
+  <mat-card class="mat-card-dht">
+    <mat-card-content>
+      <div class="title-container">
+        <h2 class="dht-title">Temperature</h2>
+      </div>
+
+      <mat-progress-spinner
+        class="gauge"
+        [color]="colorTemp"
+        [mode]="mode"
+        [value]="values[0].temp*2.2"
+        [diameter] = "70" >
+
+      </mat-progress-spinner>
+      <h2 class="dht-measurement">{{values[0].temp}}</h2>
+    </mat-card-content>
+
+  </mat-card>
+
+  <mat-card class="mat-card-dry">
+    <mat-card-content>
+      <div class="title-container"><h2 class="gauge-title">Fabric Moist</h2></div>
+
+      <mat-progress-spinner
+        class="gauge"
+        [color]="colorClothes"
+        [mode]="mode"
+        [value]="values[0].wet/23">
+
+      </mat-progress-spinner>
+      <h2 class="floating-measurement">{{values[0].wet/23 | number : '1.0-0'}}%</h2>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="mat-card-dht">
+    <mat-card-content>
+      <div class="title-container"><h2 class="dht-title">Humidity</h2></div>
+
+      <mat-progress-spinner
+        class="gauge"
+        [color]="colorHum"
+        [mode]="mode"
+        [value]="values[0].hum"
+        [diameter] = "70" >
+      </mat-progress-spinner>
+      <h2 class="dht-measurement">{{values[0].hum}}</h2>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>

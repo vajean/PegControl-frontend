@@ -1,0 +1,17 @@
+<mat-drawer-container class="side-dash" autosize>
+  <mat-drawer #drawer class="sidenav" mode="side">
+    <app-side></app-side>
+  </mat-drawer>
+
+  <div class="dashboard">
+    <app-nav></app-nav>
+    <button type="button" class="button-floating" color="accent" mat-button (click)="drawer.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <app-dashboard>
+      <router-outlet></router-outlet>
+    </app-dashboard>
+  </div>
+
+</mat-drawer-container>

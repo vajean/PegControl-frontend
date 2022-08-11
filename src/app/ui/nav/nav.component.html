@@ -1,0 +1,21 @@
+<div class="container">
+  <button mat-button class="device-selection" [matMenuTriggerFor]="menu">My Device</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>My Device</button>
+    <button mat-menu-item>My second</button>
+    <button mat-menu-item>Add device</button>
+  </mat-menu>
+
+  <button mat-mini-fab color="primary" [matMenuTriggerFor]="user">
+    <mat-icon>person</mat-icon>
+  </button>
+  <mat-menu class="user-menu" #user="matMenu">
+    <div class="user-menu-title">Dry Vajean!</div>
+    <div>
+      <button mat-button>Profile</button>
+    </div>
+    <div>
+      <button mat-button>Log out</button>
+    </div>
+  </mat-menu>
+</div>

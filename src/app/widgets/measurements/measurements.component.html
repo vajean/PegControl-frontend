@@ -1,0 +1,25 @@
+<div class="container m-100 main">
+
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">Time</th>
+      <th scope="col">Air Humidity</th>
+      <th scope="col">Air Temperature</th>
+      <th scope="col">Clothes Humidity</th>
+      <th>
+
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of meas;">
+
+      <td>{{measurements.convertDate(item) | date: 'hh:mm dd.MM.yyyy'}}</td>
+      <td>{{item.hum}}</td>
+      <td>{{item.temp}}</td>
+      <td>{{item.wet}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

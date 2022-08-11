@@ -1,0 +1,18 @@
+.dashboard-body {
+  max-width: 1200px;
+  min-width: 600px;
+  margin: auto;
+  height: 1200px;
+  margin-top: 64px;
+  }
+
+.app-measurements {
+  align-self: start;
+  margin-top: 48px;
+}
+
+.app-graph {
+  align-self: start;
+  margin-top: 48px;
+}
+

@@ -1,0 +1,13 @@
+.sidenav {
+  width: 200px;
+}
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+.button-floating {
+  width: 30px;
+  position: absolute;
+  padding-top: 16px;
+
+}

@@ -1,0 +1,6 @@
+/src/environments/
+/.angular/
+/.firebase/
+/.vscode/
+/dist/
+/node_modules/

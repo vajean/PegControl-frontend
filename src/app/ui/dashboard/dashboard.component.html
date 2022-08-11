@@ -1,0 +1,18 @@
+<div class="container dashboard-body">
+  <mat-grid-list cols="2" rowHeight="3:2">
+    <mat-grid-tile [style.background]="backColor">
+      <app-gauge></app-gauge>
+    </mat-grid-tile>
+    <mat-grid-tile [style.background]="backColor">
+      <app-control></app-control>
+    </mat-grid-tile>
+    <mat-grid-tile [style.background]="backColor"  >
+      <app-measurements class="app-measurements"></app-measurements>
+    </mat-grid-tile>
+    <mat-grid-tile [style.background]="backColor" >
+      <app-graph class="app-graph"></app-graph>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
